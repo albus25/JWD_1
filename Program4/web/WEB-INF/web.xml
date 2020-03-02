@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ConfigServlet</servlet-name>
+        <servlet-class>ServletsPack.ConfigServlet</servlet-class>
+        <init-param>
+            <param-name>Email</param-name>
+            <param-value>saurabhjerry2@gmail.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>Web</param-name>
+            <param-value>www.google.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>ContextServlet</servlet-name>
+        <servlet-class>ServletsPack.ContextServlet</servlet-class>
+    </servlet>
+    <context-param>
+        <param-name>Web</param-name>
+        <param-value>www.google.com</param-value>
+    </context-param>
+    <servlet-mapping>
+        <servlet-name>ConfigServlet</servlet-name>
+        <url-pattern>/ConfigServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContextServlet</servlet-name>
+        <url-pattern>/ContextServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
